@@ -1,0 +1,23 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Musicas!!</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+	<section>
+		<header>
+			<h1>Musicas!! XD</h1>
+		</header>
+		<article>
+			<ul>
+				{% for entrada in entradas  %}
+					<li>{{ entrada.titulo }}</li>
+				{% endfor %}
+			</ul>
+		</article>
+	</section>
+</body>
+</html>
